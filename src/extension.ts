@@ -18,7 +18,7 @@ const logMethodTransform = supportedLogs.map(([method, color]) => ({
   offset: -(`${reset}"`.length + paddingLength),
 }));
 
-export function activate(context: vscode.ExtensionContext) {
+export function activate(context?: vscode.ExtensionContext) {
   vscode.workspace.onDidChangeTextDocument((e) => {
     const change = e.contentChanges[0];
 
